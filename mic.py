@@ -1,9 +1,7 @@
 import pyaudio
+from constants import SAMPLE_RATE, FORMAT, CHUNK_SIZE
 
 # Set up the PyAudio object
-sample_rate = 44100
-format = pyaudio.paInt16
-chunk = 1024
 p = pyaudio.PyAudio()
 
 def get_audio_stream():
@@ -11,4 +9,4 @@ def get_audio_stream():
 
     # Returns
     # Audio stream in pyaudio.Stream
-    return p.open(format=format, channels=1, rate=sample_rate, input=True, frames_per_buffer=chunk)
+    return p.open(format=FORMAT, channels=1, rate=SAMPLE_RATE, input=True, frames_per_buffer=CHUNK_SIZE)

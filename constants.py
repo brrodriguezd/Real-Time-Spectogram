@@ -1,0 +1,6 @@
+import pyaudio
+
+SAMPLE_RATE = 44100
+FORMAT = pyaudio.paInt16
+CHUNK_SIZE = 1024
+NUM_CHUNKS = 100
