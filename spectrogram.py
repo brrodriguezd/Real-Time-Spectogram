@@ -39,6 +39,7 @@ freqs = np.fft.rfftfreq(N_FFT, 1 / RATE)
 line_fft, = ax1.semilogx(freqs, np.random.rand(len(freqs)), 'b')
 ax1.set_ylim(0, 1)
 ax1.set_xlim(20, RATE / 2)
+ax1.set_xscale('log')  # Cambiar el eje x a escala logarítmica
 ax1.set_title("Espectro de Frecuencia (Dominio de la Frecuencia)")
 ax1.set_xlabel("Frecuencia (Hz)")
 ax1.set_ylabel("Magnitud")
